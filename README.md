@@ -6,7 +6,7 @@
 </div>
 <br>
 
-![](visuals/scaling_compressed.png)
+![](visuals/scaling.png)
 
 This repository provides an overview of all resources for the paper ["s1: Simple test-time scaling"](https://arxiv.org/abs/TODO).
 

@@ -1,7 +1,7 @@
 group:
   - math_word_problems
 task: openai_math_train
-dataset_path: qfq/openaimath
+dataset_path: simplescaling/openaimath
 process_docs: !function utils.process_docs
 output_type: generate_until
 test_split: train

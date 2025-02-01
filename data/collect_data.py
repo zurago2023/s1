@@ -112,8 +112,8 @@ def load_generic(name, split, question_field="question", solution_field="solutio
     return ds
 
 def load_math():
-    ds = datasets.load_dataset("qfq/openaimath", trust_remote_code=True)["train"]
-    ds = ds.map(lambda x: {"question": x.pop("problem"), "solution": x.pop("solution"), "cot_type": "math", "source_type": "qfq/openaimath/" + x['subject'], "metadata": str(x)})
+    ds = datasets.load_dataset("simplescaling/openaimath", trust_remote_code=True)["train"]
+    ds = ds.map(lambda x: {"question": x.pop("problem"), "solution": x.pop("solution"), "cot_type": "math", "source_type": "simplescaling/openaimath/" + x['subject'], "metadata": str(x)})
     ds = ds.remove_columns([c for c in ds.column_names if c not in DS_COLUMNS])
     return ds
 
@@ -130,7 +130,7 @@ def load_numinamath():
     ds = ds.filter(lambda x: x["source"] != "aops_forum")
     
     ### TMP ###
-    questions = datasets.load_dataset("qfq/numinamath_500", trust_remote_code=True)["train"]['problem']
+    questions = datasets.load_dataset("simplescaling/numinamath_500", trust_remote_code=True)["train"]['problem']
     ds = ds.filter(lambda x: (x["problem"] in questions) or (x["problem"] in TMP_QUESTIONS_TO_KEEP))
     ds = datasets.concatenate_datasets([ds, ds_aops])
     
@@ -231,8 +231,8 @@ def load_agieval():
     return ds
 
 def load_statsqual():
-    ds = datasets.load_dataset("qfq/stats_qual", trust_remote_code=True)['train']
-    ds = ds.map(lambda x: {"question": x.pop("question"), "solution": x.pop("solution"), "cot_type": "math", "source_type": "qfq/stats_qual", "metadata": str(x)})
+    ds = datasets.load_dataset("simplescaling/s1-prob", trust_remote_code=True)['train']
+    ds = ds.map(lambda x: {"question": x.pop("question"), "solution": x.pop("solution"), "cot_type": "math", "source_type": "simplescaling/s1-prob", "metadata": str(x)})
     ds = ds.remove_columns([c for c in ds.column_names if c not in DS_COLUMNS])
     return ds
 
@@ -267,8 +267,8 @@ def load_usaco():
     return ds
 
 def load_quant():
-    ds = datasets.load_dataset("qfq/quant")['train']
-    ds = ds.map(lambda x: {"question": x.pop("Question").strip(), "solution": x.pop("Answer"), "cot_type": "math", "source_type": "qfq/quant", "metadata": str(x)})
+    ds = datasets.load_dataset("simplescaling/s1-teasers")['train']
+    ds = ds.map(lambda x: {"question": x.pop("Question").strip(), "solution": x.pop("Answer"), "cot_type": "math", "source_type": "simplescaling/s1-teasers", "metadata": str(x)})
     ds = ds.remove_columns([c for c in ds.column_names if c not in DS_COLUMNS])
     return ds
 
@@ -439,7 +439,7 @@ if __name__ == "__main__":
     test_datasets = {
         "AI-MO/aimo-validation-aime": {"split": "train", "question_field": "problem"},
         "Idavidrein/gpqa": {"split": "train", "question_field": "Question"},
-        "qfq/openaimath": {"split": "test", "question_field": "problem"},
+        "simplescaling/openaimath": {"split": "test", "question_field": "problem"},
         "livecodebench/code_generation_lite": {"split": "test", "question_field": "question_content", "version_tag": "release_v4"},
     }
     test_questions = []

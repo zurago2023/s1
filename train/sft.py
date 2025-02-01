@@ -16,11 +16,11 @@ from data.utils.string_utils import parse_eidata_string
 
 @dataclass
 class TrainingConfig:
-    model_name: str = field(default="meta-llama/Llama-3.1-8B-Instruct") # alpindale/Llama-3.2-3B-Instruct # Qwen/Qwen2.5-32B-Instruct
-    block_size: int = field(default=4096)
-    wandb_project: Optional[str] = field(default="o1")
+    model_name: str = field(default="Qwen/Qwen2.5-32B-Instruct")
+    block_size: int = field(default=32768)
+    wandb_project: Optional[str] = field(default="s1")
     wandb_entity: Optional[str] = field(default="hashimoto-group")
-    train_file_path: Optional[str] = field(default='qfq/cotmathprocessed')
+    train_file_path: Optional[str] = field(default='s1/s1K')
     dagger: bool = field(default=False)
 
     def __post_init__(self):

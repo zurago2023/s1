@@ -23,6 +23,8 @@ This repository provides an overview of all resources for the paper ["s1: Simple
 - **Paper**: https://arxiv.org/abs/TODO
 - **Model**: https://hf.co/simplescaling/s1-32B
 - **Data**: https://hf.co/simplescaling/s1K
+    - s1-prob: https://hf.co/datasets/simplescaling/s1-prob
+    - s1-teasers: https://hf.co/datasets/simplescaling/s1-teasers
 
 ### Structure
 
@@ -120,6 +122,7 @@ If you want to compute statistics (avg thinking tokens etc) for an evaluation ru
 
 To run REBASE
 ... @Weijia ...
+Note that for the evaluations in the Discussion section with REBASE we used https://huggingface.co/simplescaling/step-conditional-control-old trained on an older version of our dataset https://huggingface.co/datasets/simplescaling/s1K-step-conditional-control-old and run on an older version of our evaluation using https://huggingface.co/datasets/Maxwell-Jia/AIME_2024.
 
 ### Data
 

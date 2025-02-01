@@ -15,6 +15,7 @@ This repository provides an overview of all resources for the paper ["s1: Simple
 - [Inference](#inference)
 - [Training](#pretraining)
 - [Evaluation](#evaluation)
+- [Data](#data)
 - [Visuals](#visuals)
 - [Citation](#citation)
 

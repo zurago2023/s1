@@ -206,8 +206,7 @@ All commands are in `eval/commands.sh`. For AIME24 we always pick the `aime24_no
 If you want to compute statistics (avg thinking tokens etc) for an evaluation run you can use 
 `python eval/compute_sample_stats.py path_to_samples_file.jsonl`
 
-To run REBASE
-... @Weijia ...
+To run REBASE: commands are in `eval/rebase/run.sh`
 Note that for the evaluations in the Discussion section with REBASE we used https://huggingface.co/simplescaling/step-conditional-control-old trained on an older version of our dataset https://huggingface.co/datasets/simplescaling/s1K-step-conditional-control-old and run on an older version of our evaluation using https://huggingface.co/datasets/Maxwell-Jia/AIME_2024.
 
 ### Data

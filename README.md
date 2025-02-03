@@ -127,7 +127,6 @@ for i, p in enumerate(prompts):
             prompt,
             sampling_params=sampling_params
         )
-
     ### Final answer ###
     prompt += o[0].outputs[0].text
     stop_token_ids = tok("<|im_end|>")["input_ids"]

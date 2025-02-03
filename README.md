@@ -7,7 +7,7 @@
 
 ![](visuals/scaling.png)
 
-This repository provides an overview of all resources for the paper ["s1: Simple test-time scaling"](https://arxiv.org/abs/TODO).
+This repository provides an overview of all resources for the paper ["s1: Simple test-time scaling"](https://arxiv.org/abs/2501.19393).
 
 - [Artifacts](#artifacts)
 - [Structure](#structure)
@@ -20,7 +20,7 @@ This repository provides an overview of all resources for the paper ["s1: Simple
 
 ### Artifacts
 
-- **Paper**: https://arxiv.org/abs/TODO
+- **Paper**: https://arxiv.org/abs/2501.19393
 - **Model**: https://hf.co/simplescaling/s1-32B
 - **Data**: https://hf.co/simplescaling/s1K
     - s1-prob: https://hf.co/datasets/simplescaling/s1-prob
@@ -35,8 +35,6 @@ This repository provides an overview of all resources for the paper ["s1: Simple
 ### Inference
 
 #### vLLM
-
-TODO (Niklas): Add budget forcing
 
 Install the `vllm` library and run:
 ```python
@@ -228,5 +226,13 @@ All figures and some tables are created via [this colab](https://colab.research.
 ### Citation
 
 ```bibtex
-TODO
+@misc{muennighoff2025s1simpletesttimescaling,
+      title={s1: Simple test-time scaling}, 
+      author={Niklas Muennighoff and Zitong Yang and Weijia Shi and Xiang Lisa Li and Li Fei-Fei and Hannaneh Hajishirzi and Luke Zettlemoyer and Percy Liang and Emmanuel Candès and Tatsunori Hashimoto},
+      year={2025},
+      eprint={2501.19393},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2501.19393}, 
+}
 ```

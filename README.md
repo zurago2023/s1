@@ -22,7 +22,7 @@ This repository provides an overview of all resources for the paper ["s1: Simple
 
 - **Paper**: https://arxiv.org/abs/2501.19393
 - **Model**: https://hf.co/simplescaling/s1-32B
-- **Data**: https://hf.co/simplescaling/s1K
+- **Data**: https://hf.co/datasets/simplescaling/s1K
     - s1-prob: https://hf.co/datasets/simplescaling/s1-prob
     - s1-teasers: https://hf.co/datasets/simplescaling/s1-teasers
 

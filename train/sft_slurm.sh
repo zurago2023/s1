@@ -5,7 +5,7 @@ lr=1e-5
 epochs=5
 batch_size=16
 weight_decay=1e-4
-train_dataset_name="s1K"
+train_dataset_name="s1K_tokenized"
 uid="$(date +%Y%m%d_%H%M%S)"
 
 # Parse command-line arguments

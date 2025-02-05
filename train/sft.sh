@@ -16,7 +16,7 @@ train/sft.py \
 --gradient_accumulation_steps=${gradient_accumulation_steps} \
 --num_train_epochs=${epochs} \
 --max_steps=${max_steps} \
---train_file_path="simplescaling/s1K" \
+--train_file_path="simplescaling/s1K_tokenized" \
 --model_name=${base_model} \
 --warmup_ratio=0.05 \
 --fsdp="full_shard auto_wrap" \

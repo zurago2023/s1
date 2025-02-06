@@ -150,7 +150,7 @@ for i, p in enumerate(prompts):
 Install the `transformers` & `torch` libraries and run:
 
 ```python
-from transformers import AutoModelCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"

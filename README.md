@@ -25,6 +25,7 @@ This repository provides an overview of all resources for the paper ["s1: Simple
 - **Data**: https://hf.co/datasets/simplescaling/s1K
     - s1-prob: https://hf.co/datasets/simplescaling/s1-prob
     - s1-teasers: https://hf.co/datasets/simplescaling/s1-teasers
+    - Full 59K: https://huggingface.co/datasets/simplescaling/data_ablation_full59K
 
 ### Structure
 

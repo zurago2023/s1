@@ -8,6 +8,7 @@ random.seed(42)
 import ast
 from tqdm import tqdm
 from datasets import Dataset
+import argparse
 
 TEMPLATE = "{Question}\nAnswer Choices:\n(A) {choice1}\n(B) {choice2}\n(C) {choice3}\n(D) {choice4}"
 
@@ -37,10 +38,22 @@ def process_example(example):
     else:
         return example
 
+def parse():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--local_dir",
+        type=str,
+        default=None,
+        help="Local path of random shuffled s1K, default value is None"
+    )
+    args = parser.parse_args()
+    return args
+
 if __name__ == "__main__":
-    dataset = load_dataset("s1/s1K")['train']
-    new_dataset = []
-    for doc in tqdm(dataset):
-        new_dataset.append(process_example(doc))
-    new_dataset = Dataset.from_list(new_dataset)
-    new_dataset.push_to_hub("s1/s1K")
+    args = parse()
+    dataset = load_dataset("simplescaling/s1K")['train']
+    new_dataset = dataset.map(process_example)
+    if args.local_dir:
+        new_dataset.save_to_disk(args.local_dir)
+    else:
+        new_dataset.push_to_hub("simplescaling/s1K")

@@ -23,7 +23,7 @@ def process_example(example):
         return None
 
 if __name__ == "__main__":
-    dataset = load_dataset("s1/s1K")['train']
+    dataset = load_dataset("simplescaling/s1K")['train']
     aime = load_dataset("qq8933/AIME_1983_2024")['train']
     aime_dataset = []
     for example in aime:
@@ -32,4 +32,4 @@ if __name__ == "__main__":
             aime_dataset.append(result)
     aime_dataset = Dataset.from_list(aime_dataset)
     new_dataset = concatenate_datasets([dataset, aime_dataset])
-    new_dataset.push_to_hub("s1/s1K")
+    new_dataset.push_to_hub("simplescaling/s1K")
